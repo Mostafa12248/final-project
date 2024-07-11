@@ -6,6 +6,11 @@
   scroll-behavior: smooth;
   background-color: #ffffff;
 }
+ul,
+ol {
+  list-style: none;
+}
+
 main {
   margin: 40px 150px;
   @include extra-large-screen {

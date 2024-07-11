@@ -1,0 +1,87 @@
+main {
+  .future {
+    display: flex;
+    @include medium-screen {
+      flex-wrap: wrap;
+      gap: 150px 0px;
+    }
+    @include small-screen {
+      flex-wrap: wrap;
+      gap: 150px 0px;
+    }
+    gap: 0px 40px;
+    .images {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .future-provide {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px 0px;
+      h3 {
+        @include large-screen {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        @include small-screen {
+          font-size: 22px;
+          line-height: 25px;
+        }
+        font-weight: 500;
+        color: $signin-color;
+        font-size: 35px;
+        line-height: 50px;
+      }
+      p {
+        @include large-screen {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        @include small-screen {
+          font-size: 14px;
+          line-height: 25px;
+        }
+        font-weight: 400;
+        line-height: 30px;
+        color: $p-color;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0px;
+        li {
+          position: relative;
+          font-size: 14px;
+          @include large-screen {
+            font-size: 12px;
+            line-height: 20px;
+          }
+          color: $p-color;
+          padding-left: 30px;
+          &::before {
+            @include large-screen {
+              width: 15px;
+              height: 15px;
+            }
+            content: "L";
+            transform: rotateY(180deg) rotate(-40deg);
+            position: absolute;
+            background-color: #2fab73;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            left: 0px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

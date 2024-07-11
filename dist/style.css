@@ -7,6 +7,11 @@
   background-color: #ffffff;
 }
 
+ul,
+ol {
+  list-style: none;
+}
+
 main {
   margin: 40px 150px;
 }
@@ -275,7 +280,9 @@ main .hero .about-vpn .images img {
   width: 100%;
 }
 main .hero .vpn-info {
+  box-shadow: 0px 30px 40px rgba(13, 16, 37, 0.0980392157);
   margin-top: 150px;
+  padding: 40px 0px;
   display: flex;
   justify-content: space-around;
 }
@@ -358,5 +365,107 @@ main .hero .vpn-info div .details span {
 @media (min-width: 601px) and (max-width: 768px) {
   main .hero .vpn-info div .details span {
     font-size: 16px;
+  }
+}
+
+main .future {
+  display: flex;
+  gap: 0px 40px;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .future {
+    flex-wrap: wrap;
+    gap: 150px 0px;
+  }
+}
+@media (max-width: 600px) {
+  main .future {
+    flex-wrap: wrap;
+    gap: 150px 0px;
+  }
+}
+main .future .images {
+  width: 100%;
+}
+main .future .images img {
+  width: 100%;
+}
+main .future .future-provide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px 0px;
+}
+main .future .future-provide h3 {
+  font-weight: 500;
+  color: #0b132a;
+  font-size: 35px;
+  line-height: 50px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .future .future-provide h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 600px) {
+  main .future .future-provide h3 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+main .future .future-provide p {
+  font-weight: 400;
+  line-height: 30px;
+  color: #4f5665;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .future .future-provide p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 600px) {
+  main .future .future-provide p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+main .future .future-provide ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+}
+main .future .future-provide ul li {
+  position: relative;
+  font-size: 14px;
+  color: #4f5665;
+  padding-left: 30px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .future .future-provide ul li {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+main .future .future-provide ul li::before {
+  content: "L";
+  transform: rotateY(180deg) rotate(-40deg);
+  position: absolute;
+  background-color: #2fab73;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: 0px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .future .future-provide ul li::before {
+    width: 15px;
+    height: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
