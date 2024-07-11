@@ -1,0 +1,139 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+main {
+  margin: 40px 150px;
+  @include extra-large-screen {
+    margin: 40px 120px;
+  }
+  @include large-screen {
+    margin: 40px 60px;
+  }
+  @include medium-screen {
+    margin: 40px 20px;
+  }
+
+  @include small-screen {
+    margin: 40px 10px;
+  }
+
+  header {
+    nav {
+      width: 100%;
+      display: grid;
+      align-items: center;
+      grid-template-areas: "logo nav-links log-links";
+      @include large-screen {
+        gap: 0px 20px;
+      }
+      @include medium-screen {
+        gap: 0px 10px;
+        grid-template-areas:
+          "logo logo log-links"
+          "nav-links nav-links nav-links";
+      }
+
+      @include small-screen {
+        gap: 0px 10px;
+        grid-template-areas:
+          "logo logo log-links"
+          "nav-links nav-links nav-links";
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        grid-area: logo;
+        img {
+          width: 149px;
+          height: 36.23px;
+        }
+      }
+      .nav-links {
+        grid-area: nav-links;
+        display: flex;
+        justify-content: center;
+        @include medium-screen {
+          justify-content: start;
+        }
+        @include small-screen {
+          justify-content: start;
+        }
+        ul {
+          @include extra-large-screen {
+            gap: 0px 20px;
+          }
+
+          @include large-screen {
+            gap: 0px 15px;
+          }
+
+          @include medium-screen {
+            gap: 0px 15px;
+            padding-top: 15px;
+          }
+
+          @include small-screen {
+            gap: 0px 12px;
+            padding-top: 15px;
+          }
+
+          display: flex;
+          gap: 0px 40px;
+          list-style: none;
+          li {
+            a {
+              @include large-screen {
+                font-size: 14px;
+              }
+              @include medium-screen {
+                font-size: 14px;
+              }
+              @include small-screen {
+                font-size: 12px;
+              }
+
+              text-decoration: none;
+              font-weight: 400;
+              line-height: 18.96px;
+              color: $nav-links-color;
+            }
+          }
+        }
+      }
+      .log-links {
+        grid-area: log-links;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0px 20px;
+        @include large-screen {
+          gap: 0px 15px;
+        }
+        a {
+          @include large-screen {
+            font-size: 12px;
+          }
+          @include medium-screen {
+            font-size: 14px;
+          }
+          text-decoration: none;
+          font-weight: 500;
+          line-height: 18.96px;
+          color: $signin-color;
+          &:last-child {
+            padding: 7px 20px;
+            border: 1px solid $sign-up-color;
+            border-radius: 50px;
+            color: $sign-up-color;
+          }
+        }
+      }
+    }
+  }
+}

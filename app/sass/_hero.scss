@@ -1,0 +1,165 @@
+section {
+  margin-top: 80px;
+}
+
+main {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    .about-vpn {
+      @include medium-screen {
+        flex-wrap: wrap-reverse;
+        gap: 40px 0px;
+        padding: 0px 20px;
+      }
+      @include small-screen {
+        flex-wrap: wrap-reverse;
+        gap: 40px 0px;
+        // padding: 0px 0px;
+      }
+      display: flex;
+      justify-content: space-around;
+      gap: 0px 20px;
+      .introduction {
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0px;
+        width: 100%;
+        h1 {
+          @include large-screen {
+            font-size: 30px;
+            line-height: 50px;
+          }
+          @include medium-screen {
+            font-size: 35px;
+            line-height: 50px;
+          }
+          @include small-screen {
+            font-size: 25px;
+            line-height: 30px;
+          }
+          font-weight: 500;
+          font-size: 50px;
+          line-height: 70px;
+          color: $h1-color;
+          span {
+            font-weight: 700;
+          }
+        }
+        p {
+          @include large-screen {
+            font-size: 14px;
+            line-height: 30px;
+          }
+          @include small-screen {
+            font-size: 12px;
+            line-height: 20px;
+          }
+          color: $p-color;
+          font-weight: 400;
+          line-height: 30px;
+          span {
+            font-weight: 500;
+          }
+        }
+        a {
+          @include large-screen {
+            padding: 5px 40px;
+            font-size: 14px;
+          }
+          @include medium-screen {
+            align-self: center;
+            padding: 20px 150px;
+          }
+          @include small-screen {
+            align-self: center;
+            padding: 10px 80px;
+          }
+          text-decoration: none;
+          padding: 10px 70px;
+          background-color: $bottom-color;
+          align-self: start;
+          color: white;
+          font-weight: 700;
+          line-height: 25px;
+          border-radius: 10px;
+          box-shadow: 7px 10px 35px $bottom-color;
+        }
+      }
+      .images {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .vpn-info {
+      margin-top: 150px;
+      display: flex;
+      justify-content: space-around;
+      @include medium-screen {
+        flex-wrap: wrap;
+        gap: 40px 0px;
+      }
+      @include small-screen {
+        flex-wrap: wrap;
+        gap: 60px 0px;
+      }
+      div {
+        @include extra-large-screen {
+          padding-right: 40px;
+        }
+
+        @include large-screen {
+          padding-right: 30px;
+        }
+        @include medium-screen {
+          padding-right: 20px;
+        }
+
+        @include small-screen {
+          gap: 0px 15px;
+          padding: 0;
+        }
+        padding-right: 60px;
+        align-items: center;
+        display: flex;
+        gap: 0px 40px;
+        border-right: 1px solid #eeeff2;
+        &:last-child {
+          border: none;
+        }
+        .details {
+          padding-right: 0px;
+          p {
+            @include large-screen {
+              font-size: 20px;
+            }
+            @include medium-screen {
+              font-size: 18px;
+            }
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            color: #0b132a;
+          }
+          span {
+            @include large-screen {
+              font-size: 16px;
+            }
+            @include medium-screen {
+              font-size: 16px;
+            }
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #4f5665;
+          }
+          border: none;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
