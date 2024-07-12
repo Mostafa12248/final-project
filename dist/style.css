@@ -12,8 +12,16 @@ ol {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 40px 0px;
+}
+
 main {
-  margin: 40px 150px;
+  margin: 40px 150px 0px 150px;
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   main {
@@ -166,85 +174,85 @@ main header nav .log-links a:last-child {
 }
 
 section {
-  margin-top: 80px;
+  margin: 80px 0px;
 }
 
 main .hero {
   display: flex;
   flex-direction: column;
 }
-main .hero .about-vpn {
+main .hero__about-vpn {
   display: flex;
   justify-content: space-around;
   gap: 0px 20px;
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .about-vpn {
+  main .hero__about-vpn {
     flex-wrap: wrap-reverse;
     gap: 40px 0px;
     padding: 0px 20px;
   }
 }
 @media (max-width: 600px) {
-  main .hero .about-vpn {
+  main .hero__about-vpn {
     flex-wrap: wrap-reverse;
     gap: 40px 0px;
   }
 }
-main .hero .about-vpn .introduction {
+main .hero__about-vpn .introduction {
   display: flex;
   flex-direction: column;
   gap: 40px 0px;
   width: 100%;
 }
-main .hero .about-vpn .introduction h1 {
+main .hero__about-vpn .introduction h1 {
   font-weight: 500;
   font-size: 50px;
   line-height: 70px;
   color: #0b132a;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .hero .about-vpn .introduction h1 {
+  main .hero__about-vpn .introduction h1 {
     font-size: 30px;
     line-height: 50px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .about-vpn .introduction h1 {
+  main .hero__about-vpn .introduction h1 {
     font-size: 35px;
     line-height: 50px;
   }
 }
 @media (max-width: 600px) {
-  main .hero .about-vpn .introduction h1 {
+  main .hero__about-vpn .introduction h1 {
     font-size: 25px;
     line-height: 30px;
   }
 }
-main .hero .about-vpn .introduction h1 span {
+main .hero__about-vpn .introduction h1 span {
   font-weight: 700;
 }
-main .hero .about-vpn .introduction p {
+main .hero__about-vpn .introduction p {
   color: #4f5665;
   font-weight: 400;
   line-height: 30px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .hero .about-vpn .introduction p {
+  main .hero__about-vpn .introduction p {
     font-size: 14px;
     line-height: 30px;
   }
 }
 @media (max-width: 600px) {
-  main .hero .about-vpn .introduction p {
+  main .hero__about-vpn .introduction p {
     font-size: 12px;
     line-height: 20px;
   }
 }
-main .hero .about-vpn .introduction p span {
+main .hero__about-vpn .introduction p span {
   font-weight: 500;
 }
-main .hero .about-vpn .introduction a {
+main .hero__about-vpn .introduction a {
   text-decoration: none;
   padding: 10px 70px;
   background-color: #f53838;
@@ -256,30 +264,30 @@ main .hero .about-vpn .introduction a {
   box-shadow: 7px 10px 35px #f53838;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .hero .about-vpn .introduction a {
+  main .hero__about-vpn .introduction a {
     padding: 5px 40px;
     font-size: 14px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .about-vpn .introduction a {
+  main .hero__about-vpn .introduction a {
     align-self: center;
     padding: 20px 150px;
   }
 }
 @media (max-width: 600px) {
-  main .hero .about-vpn .introduction a {
+  main .hero__about-vpn .introduction a {
     align-self: center;
     padding: 10px 80px;
   }
 }
-main .hero .about-vpn .images {
+main .hero__about-vpn .images {
   width: 100%;
 }
-main .hero .about-vpn .images img {
+main .hero__about-vpn .images img {
   width: 100%;
 }
-main .hero .vpn-info {
+main .hero__vpn-info {
   box-shadow: 0px 30px 40px rgba(13, 16, 37, 0.0980392157);
   margin-top: 150px;
   padding: 40px 0px;
@@ -287,18 +295,18 @@ main .hero .vpn-info {
   justify-content: space-around;
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .vpn-info {
+  main .hero__vpn-info {
     flex-wrap: wrap;
     gap: 40px 0px;
   }
 }
 @media (max-width: 600px) {
-  main .hero .vpn-info {
+  main .hero__vpn-info {
     flex-wrap: wrap;
     gap: 60px 0px;
   }
 }
-main .hero .vpn-info div {
+main .hero__vpn-info div {
   padding-right: 60px;
   align-items: center;
   display: flex;
@@ -306,64 +314,64 @@ main .hero .vpn-info div {
   border-right: 1px solid #eeeff2;
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
-  main .hero .vpn-info div {
+  main .hero__vpn-info div {
     padding-right: 40px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .hero .vpn-info div {
+  main .hero__vpn-info div {
     padding-right: 30px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .vpn-info div {
+  main .hero__vpn-info div {
     padding-right: 20px;
   }
 }
 @media (max-width: 600px) {
-  main .hero .vpn-info div {
+  main .hero__vpn-info div {
     gap: 0px 15px;
     padding: 0;
   }
 }
-main .hero .vpn-info div:last-child {
+main .hero__vpn-info div:last-child {
   border: none;
 }
-main .hero .vpn-info div .details {
+main .hero__vpn-info div .details {
   padding-right: 0px;
   border: none;
   display: flex;
   flex-direction: column;
 }
-main .hero .vpn-info div .details p {
+main .hero__vpn-info div .details p {
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   color: #0b132a;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .hero .vpn-info div .details p {
+  main .hero__vpn-info div .details p {
     font-size: 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .vpn-info div .details p {
+  main .hero__vpn-info div .details p {
     font-size: 18px;
   }
 }
-main .hero .vpn-info div .details span {
+main .hero__vpn-info div .details span {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   color: #4f5665;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .hero .vpn-info div .details span {
+  main .hero__vpn-info div .details span {
     font-size: 16px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  main .hero .vpn-info div .details span {
+  main .hero__vpn-info div .details span {
     font-size: 16px;
   }
 }
@@ -384,72 +392,72 @@ main .future {
     gap: 150px 0px;
   }
 }
-main .future .images {
+main .future__images {
   width: 100%;
 }
-main .future .images img {
+main .future__images img {
   width: 100%;
 }
-main .future .future-provide {
+main .future__provide {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px 0px;
 }
-main .future .future-provide h3 {
+main .future__provide h3 {
   font-weight: 500;
   color: #0b132a;
   font-size: 35px;
   line-height: 50px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .future .future-provide h3 {
+  main .future__provide h3 {
     font-size: 25px;
     line-height: 30px;
   }
 }
 @media (max-width: 600px) {
-  main .future .future-provide h3 {
+  main .future__provide h3 {
     font-size: 22px;
     line-height: 25px;
   }
 }
-main .future .future-provide p {
+main .future__provide p {
   font-weight: 400;
   line-height: 30px;
   color: #4f5665;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .future .future-provide p {
+  main .future__provide p {
     font-size: 14px;
     line-height: 20px;
   }
 }
 @media (max-width: 600px) {
-  main .future .future-provide p {
+  main .future__provide p {
     font-size: 14px;
     line-height: 25px;
   }
 }
-main .future .future-provide ul {
+main .future__provide ul {
   display: flex;
   flex-direction: column;
   gap: 20px 0px;
 }
-main .future .future-provide ul li {
+main .future__provide ul li {
   position: relative;
   font-size: 14px;
   color: #4f5665;
   padding-left: 30px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .future .future-provide ul li {
+  main .future__provide ul li {
     font-size: 12px;
     line-height: 20px;
   }
 }
-main .future .future-provide ul li::before {
+main .future__provide ul li::before {
   content: "L";
   transform: rotateY(180deg) rotate(-40deg);
   position: absolute;
@@ -464,8 +472,194 @@ main .future .future-provide ul li::before {
   align-items: center;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  main .future .future-provide ul li::before {
+  main .future__provide ul li::before {
     width: 15px;
     height: 15px;
   }
+}
+
+main .plan {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px 0px;
+}
+main .plan__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px 0px;
+  background-color: #f8f8f8;
+}
+main .plan__header h1 {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: #0b132a;
+  background-color: #f8f8f8;
+}
+main .plan__header p {
+  background-color: #f8f8f8;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #4f5665;
+}
+main .plan__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  gap: 0px 20px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .plan__content {
+    gap: 0px 10px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .plan__content {
+    flex-wrap: wrap;
+    gap: 30px 20px;
+  }
+}
+@media (max-width: 600px) {
+  main .plan__content {
+    flex-wrap: wrap;
+    gap: 30px 0px;
+  }
+}
+main .plan__content .plan__details {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  border: 1px solid #dddddd;
+  align-items: start;
+  justify-content: center;
+  gap: 40px 0px;
+  width: 330px;
+  height: 760px;
+  border-radius: 10px;
+  padding: 40px 0px;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .plan__content .plan__details {
+    width: 230px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .plan__content .plan__details {
+    width: 210px;
+    height: 600px;
+    gap: 20px 0px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .plan__content .plan__details {
+    width: 250px;
+    flex-grow: 1;
+  }
+  main .plan__content .plan__details:last-child {
+    flex-grow: 0;
+  }
+}
+@media (max-width: 600px) {
+  main .plan__content .plan__details {
+    flex-grow: 1;
+    margin: 0px 40px;
+  }
+}
+main .plan__content .plan__details:last-child {
+  border: 2px solid #f53838;
+}
+main .plan__content .plan__details:last-child a {
+  background-color: #f53838;
+  color: white;
+}
+main .plan__content .plan__details--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px 0px;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .plan__content .plan__details--info {
+    gap: 40px 0px;
+  }
+  main .plan__content .plan__details--info img {
+    width: 90px;
+    height: auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .plan__content .plan__details--info {
+    gap: 35px 0px;
+  }
+  main .plan__content .plan__details--info img {
+    width: 80px;
+    height: auto;
+  }
+}
+main .plan__content .plan__details--info p {
+  color: #0b132a;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .plan__content .plan__details--ul ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px 0px;
+}
+main .plan__content .plan__details--ul ul li {
+  padding-inline-start: 25px;
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #4f5665;
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+  main .plan__content .plan__details--ul ul li {
+    font-size: 12px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .plan__content .plan__details--ul ul li {
+    font-size: 12px;
+  }
+}
+main .plan__content .plan__details--ul ul li::before {
+  content: "L";
+  position: absolute;
+  color: green;
+  transform: rotateY(180deg) rotate(-30deg);
+  left: 0px;
+  font-size: 15px;
+}
+main .plan__content .plan__details--links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
+  align-items: center;
+  align-self: flex-end;
+}
+main .plan__content .plan__details--links p {
+  color: #0b132a;
+  line-height: 30px;
+  font-size: 25px;
+  font-weight: 500;
+}
+main .plan__content .plan__details--links p span {
+  font-weight: 400;
+}
+main .plan__content .plan__details--links a {
+  font-weight: 700;
+  color: white;
+  padding: 10px 55px;
+  border-radius: 50px;
+  border: 2px solid #f53838;
+  color: #f53838;
 }/*# sourceMappingURL=style.css.map */

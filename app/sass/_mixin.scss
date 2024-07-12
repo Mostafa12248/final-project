@@ -27,21 +27,3 @@ $extra-large-screen: 1200px;
     @content;
   }
 }
-
-// &::before {
-//   content: " ";
-//   position: absolute;
-//   background-color: $primary;
-//   width: 40%;
-//   height: 140%;
-//   top: -20px;
-//   animation: 4s rotate linear infinite;
-// }
-// &::after {
-//   content: " ";
-//   position: absolute;
-//   inset: 2px;
-//   background-color: $bgCard-hero;
-//   border-radius: 10px;
-//   z-index: 1;
-// }
