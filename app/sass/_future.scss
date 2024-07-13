@@ -7,12 +7,21 @@ main {
     }
     @include small-screen {
       flex-wrap: wrap;
-      gap: 150px 0px;
+      gap: 80px 0px;
     }
     gap: 0px 40px;
     &__images {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
+        @include medium-screen {
+          width: 90%;
+        }
+        @include small-screen {
+          width: 90%;
+        }
         width: 100%;
       }
     }
@@ -21,15 +30,20 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 20px 0px;
+      gap: 40px 0px;
       h3 {
         @include large-screen {
           font-size: 25px;
           line-height: 30px;
         }
         @include small-screen {
-          font-size: 22px;
+          font-size: 23px;
           line-height: 25px;
+          text-align: center;
+        }
+        @include medium-screen {
+          font-size: 27px;
+          text-align: center;
         }
         font-weight: 500;
         color: $signin-color;
@@ -44,6 +58,7 @@ main {
         @include small-screen {
           font-size: 14px;
           line-height: 25px;
+          padding-inline-start: 20px;
         }
         font-weight: 400;
         line-height: 30px;
@@ -53,6 +68,9 @@ main {
         display: flex;
         flex-direction: column;
         gap: 20px 0px;
+        @include small-screen {
+          padding-inline-start: 20px;
+        }
         li {
           position: relative;
           font-size: 14px;

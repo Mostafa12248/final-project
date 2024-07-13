@@ -219,14 +219,16 @@ main .hero__about-vpn .introduction h1 {
 }
 @media (min-width: 601px) and (max-width: 768px) {
   main .hero__about-vpn .introduction h1 {
-    font-size: 35px;
+    font-size: 30px;
     line-height: 50px;
+    text-align: center;
   }
 }
 @media (max-width: 600px) {
   main .hero__about-vpn .introduction h1 {
-    font-size: 25px;
+    font-size: 23px;
     line-height: 30px;
+    text-align: center;
   }
 }
 main .hero__about-vpn .introduction h1 span {
@@ -247,6 +249,13 @@ main .hero__about-vpn .introduction p {
   main .hero__about-vpn .introduction p {
     font-size: 12px;
     line-height: 20px;
+    text-align: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .hero__about-vpn .introduction p {
+    text-align: center;
+    font-size: 12px;
   }
 }
 main .hero__about-vpn .introduction p span {
@@ -283,9 +292,22 @@ main .hero__about-vpn .introduction a {
 }
 main .hero__about-vpn .images {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .hero__about-vpn .images img {
   width: 100%;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .hero__about-vpn .images img {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  main .hero__about-vpn .images img {
+    width: 90%;
+  }
 }
 main .hero__vpn-info {
   box-shadow: 0px 30px 40px rgba(13, 16, 37, 0.0980392157);
@@ -389,21 +411,34 @@ main .future {
 @media (max-width: 600px) {
   main .future {
     flex-wrap: wrap;
-    gap: 150px 0px;
+    gap: 80px 0px;
   }
 }
 main .future__images {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .future__images img {
   width: 100%;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .future__images img {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  main .future__images img {
+    width: 90%;
+  }
 }
 main .future__provide {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px 0px;
+  gap: 40px 0px;
 }
 main .future__provide h3 {
   font-weight: 500;
@@ -419,8 +454,15 @@ main .future__provide h3 {
 }
 @media (max-width: 600px) {
   main .future__provide h3 {
-    font-size: 22px;
+    font-size: 23px;
     line-height: 25px;
+    text-align: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .future__provide h3 {
+    font-size: 27px;
+    text-align: center;
   }
 }
 main .future__provide p {
@@ -438,12 +480,18 @@ main .future__provide p {
   main .future__provide p {
     font-size: 14px;
     line-height: 25px;
+    padding-inline-start: 20px;
   }
 }
 main .future__provide ul {
   display: flex;
   flex-direction: column;
   gap: 20px 0px;
+}
+@media (max-width: 600px) {
+  main .future__provide ul {
+    padding-inline-start: 20px;
+  }
 }
 main .future__provide ul li {
   position: relative;
@@ -662,4 +710,123 @@ main .plan__content .plan__details--links a {
   border-radius: 50px;
   border: 2px solid #f53838;
   color: #f53838;
+}
+
+main .global {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0px;
+}
+main .global__heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px 0px;
+  align-items: center;
+}
+main .global__heading h1 {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: #0b132a;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .global__heading h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .global__heading h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  main .global__heading h1 {
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+main .global__heading p {
+  font-weight: 400;
+  line-height: 30px;
+  color: #4f5665;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .global__heading p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+  }
+}
+@media (max-width: 600px) {
+  main .global__heading p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+  }
+}
+main .global__heading p span {
+  font-weight: 500;
+}
+main .global__map {
+  width: 100%;
+  display: flex;
+}
+main .global__map img {
+  height: auto;
+  width: 200px;
+  flex-grow: 1;
+}
+main .global__company {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 20px;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .global__company {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .global__company {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+}
+@media (max-width: 600px) {
+  main .global__company {
+    flex-wrap: wrap;
+    gap: 15px 60px;
+  }
+}
+main .global__company div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .global__company div img {
+  width: 180px;
+  height: auto;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main .global__company div img {
+    width: 187px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  main .global__company div img {
+    width: 170px;
+  }
+}
+@media (max-width: 600px) {
+  main .global__company div img {
+    width: 140px;
+  }
 }/*# sourceMappingURL=style.css.map */
