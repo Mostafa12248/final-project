@@ -16,6 +16,27 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+  color: $h1-color;
+  background-color: transparent;
+  @include large-screen {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  @include medium-screen {
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+  }
+  @include small-screen {
+    font-size: 23px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
 p {
   background-color: transparent;
 }

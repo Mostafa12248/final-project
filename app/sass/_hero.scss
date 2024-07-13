@@ -24,25 +24,11 @@ main {
         flex-direction: column;
         gap: 40px 0px;
         width: 100%;
-        h1 {
-          @include large-screen {
-            font-size: 30px;
-            line-height: 50px;
-          }
-          @include medium-screen {
-            font-size: 30px;
-            line-height: 50px;
-            text-align: center;
-          }
-          @include small-screen {
-            font-size: 23px;
-            line-height: 30px;
-            text-align: center;
-          }
-          span {
-            font-weight: 700;
-          }
+
+        span {
+          font-weight: 700;
         }
+
         p {
           @include large-screen {
             font-size: 14px;
