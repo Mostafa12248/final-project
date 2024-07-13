@@ -1,0 +1,124 @@
+main {
+  .review {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0px;
+    &__heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px 0px;
+      p {
+        font-weight: 400;
+        color: $p-color;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0px 20px;
+      @include large-screen {
+        gap: 0px 15px;
+      }
+      @include medium-screen {
+        gap: 20px 20px;
+        flex-wrap: wrap;
+      }
+
+      @include small-screen {
+        gap: 20px 20px;
+        flex-wrap: wrap;
+      }
+      &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0px;
+        flex-grow: 1;
+
+        width: 250px;
+        min-height: 230px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 1px solid #dddddd;
+        padding: 20px;
+        @include large-screen {
+          padding: 10px;
+        }
+        @include medium-screen {
+          &:last-child {
+            flex-grow: 1;
+            margin: 0px 80px;
+          }
+        }
+        &:first-child {
+          border: 1px solid $bottom-color;
+        }
+        &--info {
+          display: flex;
+          gap: 0px 20px;
+          justify-content: space-between;
+          align-items: center;
+          &--name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0px 10px;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+            &--info {
+              transform: translateY(8px);
+              h5 {
+                @include extra-large-screen {
+                  font-size: 13px;
+                }
+                @include large-screen {
+                  font-size: 11px;
+                }
+                font-weight: 500;
+                color: $h1-color;
+                font-size: 18px;
+                line-height: 15px;
+                text-align: center;
+              }
+              span {
+                @include extra-large-screen {
+                  font-size: 10px;
+                }
+                @include large-screen {
+                  font-size: 8px;
+                }
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 30px;
+                text-align: center;
+                color: $p-color;
+              }
+            }
+          }
+        }
+        &--text {
+          @include extra-large-screen {
+            font-size: 14px;
+          }
+          @include large-screen {
+            font-size: 14px;
+          }
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 30px;
+          font-weight: 400;
+          color: $h1-color;
+        }
+      }
+    }
+  }
+}
