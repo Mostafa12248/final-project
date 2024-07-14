@@ -53,7 +53,7 @@ section {
 }
 
 main {
-  margin: 40px 150px 0px 150px;
+  margin: 40px 150px;
 }
 @media (min-width: 1025px) and (max-width: 1200px) {
   main {
@@ -825,13 +825,14 @@ main .global__company div img {
 main .review {
   display: flex;
   flex-direction: column;
-  gap: 40px 0px;
+  gap: 90px 0px;
 }
 main .review__heading {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   gap: 40px 0px;
 }
 main .review__heading p {
@@ -845,46 +846,21 @@ main .review__content {
   justify-content: space-between;
   align-items: center;
   gap: 0px 20px;
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .review__content {
-    gap: 0px 15px;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  main .review__content {
-    gap: 20px 20px;
-    flex-wrap: wrap;
-  }
-}
-@media (max-width: 600px) {
-  main .review__content {
-    gap: 20px 20px;
-    flex-wrap: wrap;
-  }
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 main .review__content__box {
   display: flex;
   flex-direction: column;
   gap: 20px 0px;
-  flex-grow: 1;
-  width: 250px;
-  min-height: 230px;
+  width: 410px;
+  min-height: 250px;
+  flex-shrink: 0;
   background-color: #ffffff;
   border-radius: 10px;
   border: 1px solid #dddddd;
   padding: 20px;
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .review__content__box {
-    padding: 10px;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  main .review__content__box:last-child {
-    flex-grow: 1;
-    margin: 0px 80px;
-  }
+  scroll-snap-align: start;
 }
 main .review__content__box:first-child {
   border: 1px solid #f53838;
@@ -915,32 +891,12 @@ main .review__content__box--info--name--info h5 {
   line-height: 15px;
   text-align: center;
 }
-@media (min-width: 1025px) and (max-width: 1200px) {
-  main .review__content__box--info--name--info h5 {
-    font-size: 13px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .review__content__box--info--name--info h5 {
-    font-size: 11px;
-  }
-}
 main .review__content__box--info--name--info span {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: #4f5665;
-}
-@media (min-width: 1025px) and (max-width: 1200px) {
-  main .review__content__box--info--name--info span {
-    font-size: 10px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  main .review__content__box--info--name--info span {
-    font-size: 8px;
-  }
 }
 main .review__content__box--text {
   width: 100%;
@@ -961,4 +917,40 @@ main .review__content__box--text {
   main .review__content__box--text {
     font-size: 14px;
   }
+}
+main .review__content::-webkit-scrollbar {
+  height: 3px;
+}
+main .review__content::-webkit-scrollbar-thumb {
+  background-color: #f53838;
+}
+main .review__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 30px;
+}
+@media (max-width: 600px) {
+  main .review__footer {
+    justify-content: center;
+  }
+}
+main .review__footer--dots img {
+  width: 135px;
+  height: 15px;
+}
+main .review__footer--click {
+  display: inline-block;
+  transform: translateY(-48px);
+}
+@media (max-width: 600px) {
+  main .review__footer--click {
+    display: none;
+  }
+}
+main .review__footer--click img {
+  align-self: self-start;
+}
+main .review__footer--click [alt=click-right] {
+  transform: translateY(58px);
 }/*# sourceMappingURL=style.css.map */

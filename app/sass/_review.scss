@@ -2,12 +2,13 @@ main {
   .review {
     display: flex;
     flex-direction: column;
-    gap: 40px 0px;
+    gap: 90px 0px;
     &__heading {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      text-align: center;
       gap: 40px 0px;
       p {
         font-weight: 400;
@@ -21,39 +22,21 @@ main {
       justify-content: space-between;
       align-items: center;
       gap: 0px 20px;
-      @include large-screen {
-        gap: 0px 15px;
-      }
-      @include medium-screen {
-        gap: 20px 20px;
-        flex-wrap: wrap;
-      }
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
 
-      @include small-screen {
-        gap: 20px 20px;
-        flex-wrap: wrap;
-      }
       &__box {
         display: flex;
         flex-direction: column;
         gap: 20px 0px;
-        flex-grow: 1;
-
-        width: 250px;
-        min-height: 230px;
+        width: 410px;
+        min-height: 250px;
+        flex-shrink: 0;
         background-color: #ffffff;
         border-radius: 10px;
         border: 1px solid #dddddd;
         padding: 20px;
-        @include large-screen {
-          padding: 10px;
-        }
-        @include medium-screen {
-          &:last-child {
-            flex-grow: 1;
-            margin: 0px 80px;
-          }
-        }
+        scroll-snap-align: start;
         &:first-child {
           border: 1px solid $bottom-color;
         }
@@ -74,12 +57,6 @@ main {
             &--info {
               transform: translateY(8px);
               h5 {
-                @include extra-large-screen {
-                  font-size: 13px;
-                }
-                @include large-screen {
-                  font-size: 11px;
-                }
                 font-weight: 500;
                 color: $h1-color;
                 font-size: 18px;
@@ -87,12 +64,6 @@ main {
                 text-align: center;
               }
               span {
-                @include extra-large-screen {
-                  font-size: 10px;
-                }
-                @include large-screen {
-                  font-size: 8px;
-                }
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 30px;
@@ -117,6 +88,42 @@ main {
           line-height: 30px;
           font-weight: 400;
           color: $h1-color;
+        }
+      }
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $bottom-color;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 30px;
+      @include small-screen {
+        justify-content: center;
+      }
+      &--dots {
+        img {
+          width: 135px;
+          height: 15px;
+        }
+      }
+      &--click {
+        @include small-screen {
+          display: none;
+        }
+        display: inline-block;
+        transform: translateY(-48px);
+        img {
+          align-self: self-start;
+        }
+        [alt="click-right"] {
+          transform: translateY(58px);
         }
       }
     }

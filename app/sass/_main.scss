@@ -46,7 +46,8 @@ section {
 }
 
 main {
-  margin: 40px 150px 0px 150px;
+  // margin: 40px 150px 0px 150px;
+  margin: 40px 150px;
   @include extra-large-screen {
     margin: 40px 120px;
   }
