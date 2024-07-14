@@ -2,6 +2,8 @@ main {
   .review {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     gap: 90px 0px;
     &__heading {
       display: flex;
@@ -24,6 +26,26 @@ main {
       gap: 0px 20px;
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
+      &::-webkit-scrollbar {
+        height: 2px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @include extra-large-screen {
+          background-color: $bottom-color;
+        }
+
+        @include large-screen {
+          background-color: $bottom-color;
+        }
+
+        @include medium-screen {
+          background-color: $bottom-color;
+        }
+        @include small-screen {
+          background-color: $bottom-color;
+        }
+      }
 
       &__box {
         display: flex;
@@ -36,6 +58,7 @@ main {
         border-radius: 10px;
         border: 1px solid #dddddd;
         padding: 20px;
+        margin-bottom: 10px;
         scroll-snap-align: start;
         &:first-child {
           border: 1px solid $bottom-color;
@@ -90,13 +113,6 @@ main {
           color: $h1-color;
         }
       }
-      &::-webkit-scrollbar {
-        height: 3px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: $bottom-color;
-      }
     }
 
     &__footer {
@@ -124,6 +140,52 @@ main {
         }
         [alt="click-right"] {
           transform: translateY(58px);
+        }
+      }
+    }
+
+    &__subscribe {
+      align-self: center;
+      display: grid;
+      grid-template-areas: "title bottom";
+      box-shadow: 0px 0px 40px #0d102519;
+      width: 90%;
+      padding: 30px 0px;
+      @include medium-screen {
+        grid-template-areas:
+          "title"
+          "bottom";
+        gap: 80px 0px;
+      }
+      @include small-screen {
+        grid-template-areas:
+          "title"
+          "bottom";
+        gap: 80px 0px;
+      }
+      &--title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p {
+          font-weight: 400;
+          color: $p-color;
+          padding-top: 7px;
+        }
+      }
+      &--bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          padding: 15px 45px;
+          background-color: $bottom-color;
+          color: white;
+          font-weight: 700;
+          line-height: 25px;
+          border-radius: 10px;
+          box-shadow: 7px 10px 35px $bottom-color;
         }
       }
     }
