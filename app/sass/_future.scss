@@ -31,35 +31,6 @@ main {
       flex-direction: column;
       justify-content: center;
       gap: 40px 0px;
-      h1 {
-        @include large-screen {
-          font-size: 25px;
-          line-height: 30px;
-        }
-        @include small-screen {
-          font-size: 23px;
-          line-height: 25px;
-          text-align: center;
-        }
-        @include medium-screen {
-          font-size: 27px;
-          text-align: center;
-        }
-      }
-      p {
-        @include large-screen {
-          font-size: 14px;
-          line-height: 20px;
-        }
-        @include small-screen {
-          font-size: 14px;
-          line-height: 25px;
-          padding-inline-start: 20px;
-        }
-        font-weight: 400;
-        line-height: 30px;
-        color: $p-color;
-      }
       ul {
         display: flex;
         flex-direction: column;

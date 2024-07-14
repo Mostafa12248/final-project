@@ -12,12 +12,6 @@ main {
       flex-direction: column;
       text-align: center;
       gap: 40px 0px;
-      p {
-        font-weight: 400;
-        color: $p-color;
-        line-height: 30px;
-        text-align: center;
-      }
     }
     &__content {
       display: flex;
@@ -168,11 +162,6 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        p {
-          font-weight: 400;
-          color: $p-color;
-          padding-top: 7px;
-        }
       }
       &--bottom {
         display: flex;

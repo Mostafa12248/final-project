@@ -24,56 +24,35 @@ main {
         flex-direction: column;
         gap: 40px 0px;
         width: 100%;
-
+        color: $p-color;
+        font-weight: 400;
+        line-height: 30px;
         span {
-          font-weight: 700;
+          font-weight: 500;
         }
-
-        p {
-          @include large-screen {
-            font-size: 14px;
-            line-height: 30px;
-          }
-          @include small-screen {
-            font-size: 12px;
-            line-height: 20px;
-            text-align: center;
-          }
-          @include medium-screen {
-            text-align: center;
-            font-size: 12px;
-          }
-
-          color: $p-color;
-          font-weight: 400;
-          line-height: 30px;
-          span {
-            font-weight: 500;
-          }
+      }
+      a {
+        @include large-screen {
+          padding: 5px 40px;
+          font-size: 14px;
         }
-        a {
-          @include large-screen {
-            padding: 5px 40px;
-            font-size: 14px;
-          }
-          @include medium-screen {
-            align-self: center;
-            padding: 20px 150px;
-          }
-          @include small-screen {
-            align-self: center;
-            padding: 10px 80px;
-          }
-          text-decoration: none;
-          padding: 10px 70px;
-          background-color: $bottom-color;
-          align-self: start;
-          color: white;
-          font-weight: 700;
-          line-height: 25px;
-          border-radius: 10px;
-          box-shadow: 7px 10px 35px $bottom-color;
+        @include medium-screen {
+          align-self: center;
+          padding: 20px 150px;
         }
+        @include small-screen {
+          align-self: center;
+          padding: 10px 80px;
+        }
+        text-decoration: none;
+        padding: 10px 70px;
+        background-color: $bottom-color;
+        align-self: start;
+        color: white;
+        font-weight: 700;
+        line-height: 25px;
+        border-radius: 10px;
+        box-shadow: 7px 10px 35px $bottom-color;
       }
       .images {
         width: 100%;
@@ -109,7 +88,6 @@ main {
         @include extra-large-screen {
           padding-right: 40px;
         }
-
         @include large-screen {
           padding-right: 30px;
         }
@@ -128,36 +106,6 @@ main {
         border-right: 1px solid #eeeff2;
         &:last-child {
           border: none;
-        }
-        .details {
-          padding-right: 0px;
-          p {
-            @include large-screen {
-              font-size: 20px;
-            }
-            @include medium-screen {
-              font-size: 18px;
-            }
-            font-weight: 700;
-            font-size: 25px;
-            line-height: 30px;
-            color: #0b132a;
-          }
-          span {
-            @include large-screen {
-              font-size: 16px;
-            }
-            @include medium-screen {
-              font-size: 16px;
-            }
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 30px;
-            color: #4f5665;
-          }
-          border: none;
-          display: flex;
-          flex-direction: column;
         }
       }
     }

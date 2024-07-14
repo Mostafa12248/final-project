@@ -17,9 +17,7 @@ main {
       justify-content: space-evenly;
     }
     @include small-screen {
-      grid-template-areas:
-        // "info info info info"
-        "product engage Earn";
+      grid-template-areas: "product engage Earn";
       gap: 70px 0px;
     }
 
@@ -36,22 +34,7 @@ main {
       line-height: 30px;
       font-size: 16px;
     }
-    p {
-      background-color: transparent;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 30px;
-      color: $p-color;
-      span {
-        background-color: transparent;
-        font-weight: 500;
-      }
-    }
-    h5 {
-      background-color: transparent;
-      color: $h1-color;
-      font-style: 18px;
-    }
+
     &__info {
       @include small-screen {
         grid-column: 1/-1;
