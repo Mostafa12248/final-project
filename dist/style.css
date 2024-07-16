@@ -101,7 +101,7 @@ main {
 }
 @media (max-width: 600px) {
   main {
-    margin: 40px 10px;
+    margin: 10px 10px;
   }
 }
 

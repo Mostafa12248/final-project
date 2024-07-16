@@ -76,12 +76,12 @@ main {
   @include large-screen {
     margin: 40px 60px;
   }
+
   @include medium-screen {
     margin: 40px 20px;
   }
-
   @include small-screen {
-    margin: 40px 10px;
+    margin: 10px 10px;
   }
 }
 
