@@ -16,6 +16,12 @@ $extra-large-screen: 1200px;
   }
 }
 
+@mixin medium-screen-down {
+  @media (max-width: $medium-screen) {
+    @content;
+  }
+}
+
 @mixin large-screen {
   @media (min-width: 769px) and (max-width: $large-screen) {
     @content;

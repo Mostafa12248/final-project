@@ -69,7 +69,6 @@ section {
 }
 
 main {
-  // margin: 40px 150px 0px 150px;
   margin: 40px 150px;
   @include extra-large-screen {
     margin: 40px 120px;
@@ -84,120 +83,128 @@ main {
   @include small-screen {
     margin: 40px 10px;
   }
+}
 
-  header {
-    nav {
-      width: 100%;
-      display: grid;
-      align-items: center;
-      grid-template-areas: "logo nav-links log-links";
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+nav .nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  @include medium-screen-down {
+    position: absolute;
+    flex-direction: column;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    gap: 20px 0px;
+  }
+}
+
+@include medium-screen-down {
+  nav:has(.input:checked) .nav-links {
+    transform: translateY(40px);
+    z-index: 10;
+  }
+}
+
+nav .nav-links ul {
+  display: flex;
+  @include large-screen {
+    gap: 0px 20px;
+  }
+  @include medium-screen-down {
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+  }
+  gap: 0px 40px;
+  align-items: center;
+  li {
+    @include medium-screen-down {
+      padding: 20px 100%;
+      border-bottom: 1px solid $p-color;
+    }
+    a {
+      @include extra-large-screen {
+        font-size: 15px;
+      }
+
       @include large-screen {
-        gap: 0px 20px;
+        font-size: 14px;
       }
-      @include medium-screen {
-        gap: 0px 10px;
-        grid-template-areas:
-          "logo logo log-links"
-          "nav-links nav-links nav-links";
-      }
+      color: $nav-links-color;
+      font-weight: 400;
+    }
+  }
+}
 
-      @include small-screen {
-        gap: 0px 10px;
-        grid-template-areas:
-          "logo logo log-links"
-          "nav-links nav-links nav-links";
-      }
+nav .nav-links .log-links {
+  display: flex;
+  gap: 0px 20px;
+  justify-content: end;
+  align-items: center;
+  @include medium-screen-down {
+    display: none;
+  }
+}
 
-      .logo {
-        display: flex;
-        align-items: center;
-        grid-area: logo;
-        img {
-          width: 149px;
-          height: 36.23px;
-        }
-      }
-      .nav-links {
-        grid-area: nav-links;
-        display: flex;
-        justify-content: center;
-        @include medium-screen {
-          justify-content: start;
-        }
-        @include small-screen {
-          justify-content: start;
-        }
-        ul {
-          @include extra-large-screen {
-            gap: 0px 20px;
-          }
+nav .nav-links .log-links a:first-child {
+  color: $signin-color;
+  @include extra-large-screen {
+    font-size: 14px;
+  }
+  @include large-screen {
+    font-size: 14px;
+  }
+}
 
-          @include large-screen {
-            gap: 0px 15px;
-          }
+nav .nav-links .log-links a:last-child {
+  @include extra-large-screen {
+    font-size: 14px;
+  }
+  @include large-screen {
+    font-size: 14px;
+  }
+  padding: 7px 20px;
+  border: 2px solid $sign-up-color;
+  border-radius: 20px;
+  color: $signin-color;
+}
 
-          @include medium-screen {
-            gap: 0px 15px;
-            padding-top: 15px;
-          }
+nav .humborger {
+  display: none;
+  @include medium-screen-down {
+    display: inline-block;
+    .input {
+      display: none;
+    }
+    .label {
+      display: flex;
+      flex-direction: column;
+      gap: 5px 0px;
+    }
 
-          @include small-screen {
-            gap: 0px 12px;
-            padding-top: 15px;
-          }
-
-          display: flex;
-          gap: 0px 40px;
-          list-style: none;
-          li {
-            a {
-              @include large-screen {
-                font-size: 14px;
-              }
-              @include medium-screen {
-                font-size: 14px;
-              }
-              @include small-screen {
-                font-size: 12px;
-              }
-
-              text-decoration: none;
-              font-weight: 400;
-              line-height: 18.96px;
-              color: $nav-links-color;
-            }
-          }
-        }
-      }
-
-      .log-links {
-        grid-area: log-links;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0px 20px;
-        @include large-screen {
-          gap: 0px 15px;
-        }
-        a {
-          @include large-screen {
-            font-size: 12px;
-          }
-          @include medium-screen {
-            font-size: 14px;
-          }
-          text-decoration: none;
-          font-weight: 500;
-          line-height: 18.96px;
-          color: $signin-color;
-          &:last-child {
-            padding: 7px 20px;
-            border: 1px solid $sign-up-color;
-            border-radius: 50px;
-            color: $sign-up-color;
-          }
-        }
-      }
+    .label__div {
+      width: 40px;
+      height: 4px;
+      background-color: black;
+    }
+    &:has(.input:checked) .label__div:first-child {
+      transform: translateY(10px) rotate(40deg);
+    }
+    &:has(.input:checked) .label__div:nth-child(2) {
+      opacity: 0;
+      visibility: visible;
+    }
+    &:has(.input:checked) .label__div:last-child {
+      transform: translateY(-7px) rotate(-40deg);
     }
   }
 }
