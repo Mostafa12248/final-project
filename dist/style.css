@@ -132,7 +132,7 @@ nav .nav-links {
 
 @media (max-width: 768px) {
   nav:has(.input:checked) .nav-links {
-    transform: translateY(40px);
+    transform: translateY(70px);
     z-index: 10;
     transition: 0.5s;
   }
