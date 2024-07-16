@@ -111,26 +111,30 @@ nav .nav-links {
   nav:has(.input:checked) .nav-links {
     transform: translateY(40px);
     z-index: 10;
+    transition: 0.5s;
   }
 }
 
 nav .nav-links ul {
   display: flex;
+  position: relative;
   @include large-screen {
     gap: 0px 20px;
   }
   @include medium-screen-down {
     flex-direction: column;
     width: 100%;
-    gap: 7px;
   }
   gap: 0px 40px;
   align-items: center;
   li {
     @include medium-screen-down {
-      padding: 20px 100%;
+      padding: 20px;
       border-bottom: 1px solid $p-color;
+      width: 100%;
+      text-align: center;
     }
+
     a {
       @include extra-large-screen {
         font-size: 15px;
@@ -192,6 +196,7 @@ nav .humborger {
     }
 
     .label__div {
+      transition: 0.4s;
       width: 40px;
       height: 4px;
       background-color: black;
