@@ -109,7 +109,7 @@ nav .nav-links {
 
 @include medium-screen-down {
   nav:has(.input:checked) .nav-links {
-    transform: translateY(90px);
+    top: 160px;
     z-index: 10;
     transition: 0.5s;
   }
